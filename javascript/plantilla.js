@@ -70,4 +70,3 @@ function eliminarClub(){
 }
 
 fichajesEquipo();
-contadorJugadores();

@@ -74,7 +74,5 @@ function contadorJugadores(){
         </span>
     </button>`;
 
-    if (window.location.pathname === "/proyecto-final/index.html" || window.location.pathname === "/6aQatar/index.html"){
-        document.getElementById("btnplantilla").innerHTML = contenido;
-    }
+    document.getElementById("btnplantilla").innerHTML = contenido;
 }
