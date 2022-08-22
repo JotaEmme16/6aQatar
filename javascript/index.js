@@ -4,7 +4,7 @@ function listadoFichajes(){
 
     futbolistas.forEach(jugador => {
         contenido += `
-        <div class="col-md-2">
+        <div class="col-6 col-sm-3 col-md-2">
             <div class="card m-2" style="width: auto;">
             <img src="images/${jugador.imagen}" class="card-img-top" alt="${jugador.nombre}">
             <div class="card-body">
