@@ -34,6 +34,7 @@ function eliminarJugador(id){
     const tu_equipo = devolverEquipo();
     let eliminar = tu_equipo.findIndex(x => x.id === id);
     tu_equipo.splice(eliminar, 1);
+    jugadorEliminado();
 
     almacenarEquipo(tu_equipo);
     fichajesEquipo();
@@ -67,6 +68,7 @@ function eliminarClub(){
     document.getElementById("fichajes").innerHTML = "";
     document.getElementById("info_equipo").innerHTML = "<br><b>ATENCIÓN: TODAVÍA NO FICHASTE A NINGÚN JUGADOR.</b>";
     localStorage.removeItem("tu_equipo");
+    clubEliminado();
 }
 
 fichajesEquipo();

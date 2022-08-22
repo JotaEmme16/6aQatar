@@ -51,15 +51,16 @@ function ficharJugador(id){
     let duplicado = tu_equipo.findIndex(item => item.id === id)
     if (tu_equipo.length < 6){
         if (duplicado > -1){
-            alert("Este jugador ya forma parte de tu equipo, seleccioná otro.");
+            jugadorDuplicado();
         } else {
             const jugador = buscarJugador(id);
             tu_equipo.push(jugador);
+            jugadorFichado();
         }
         almacenarEquipo(tu_equipo);
         contadorJugadores();
     } else{
-        alert("Ya tenés a los seis jugadores necesarios para tu equipo.");
+        equipoListo();
     }
 }
 
@@ -77,4 +78,55 @@ function contadorJugadores(){
     if (window.location.pathname === "/proyecto-final/index.html" || window.location.pathname === "/index.html" || window.location.pathname === "/6aQatar/" || window.location.pathname === "/6aQatar/index.html"){
         document.getElementById("btnplantilla").innerHTML = contenido;
     }
+}
+
+// LIBRERÍAS
+// AVISO DE FICHAJE EXITOSO (TOASTIFY)
+function jugadorFichado(){
+    Toastify({
+        text: "¡Jugador Fichado!",
+        duration: 1500,
+        gravity: "top",
+        position: "left",
+        style: {
+            background: "green"
+        }
+        }).showToast();
+}
+// AVISO DE FICHAJE ELIMINADO (TOASTIFY)
+function jugadorEliminado(){
+    Toastify({
+        text: "¡Jugador Eliminado!",
+        duration: 1500,
+        gravity: "top",
+        position: "left",
+        style: {
+            background: "red"
+        }
+        }).showToast();
+}
+// SE INTENTA FICHAR UN JUGADOR YA FICHADO (SWEET ALERT)
+function jugadorDuplicado(){
+    Swal.fire({
+        icon: 'warning',
+        title: 'Atención',
+        text: 'Este jugador ya forma parte de tu equipo, seleccioná otro.',
+        confirmButtonText: 'Entendido',
+      })
+}
+// SE ALCANZA LA CANTIDAD PERMITIDA DE JUGADORES (SWEET ALERT)
+function equipoListo(){
+    Swal.fire({
+        title: '¡No podés fichar más!',
+        text: 'Ya tenés a tus seis jugadores permitidos.',
+        imageUrl: 'images/diego-gif.gif',
+        imageWidth: 250,
+        imageHeight: 350,
+        imageAlt: 'Diego Maradona',
+        confirmButtonText: 'Entendido',
+      })
+}
+// AVISO DE CLUB ELIMINADO (SWEET ALERT)
+function clubEliminado(){
+    Swal.fire('¡Has eliminado tu club!')
 }
