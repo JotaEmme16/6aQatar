@@ -51,14 +51,6 @@ function ingresarClub(){
     document.getElementById("nombreclub").value = "";
 }
 
-// BOTÓN CONFIRMAR CLUB
-let btnconfirmarclub = document.getElementById("btnconfirmarclub");
-btnconfirmarclub.addEventListener("click", confirmarClub);
-
-function confirmarClub(){
-    alert("Ups, todavía estamos trabajando en esta sección, volvé más tarde.")
-}
-
 // BOTÓN ELIMINAR CLUB
 let btneliminarclub = document.getElementById("btneliminarclub");
 btneliminarclub.addEventListener("click", eliminarClub);
