@@ -117,14 +117,26 @@ function jugadorDuplicado(){
 // SE ALCANZA LA CANTIDAD PERMITIDA DE JUGADORES (SWEET ALERT)
 function equipoListo(){
     Swal.fire({
-        title: '¡No podés fichar más!',
-        text: 'Ya tenés a tus seis jugadores permitidos.',
+        title: '¡Atención!',
+        text: 'Completaste ya tu equipo con seis futbolistas.',
         imageUrl: 'images/diego-gif.gif',
         imageWidth: 250,
         imageHeight: 350,
         imageAlt: 'Diego Maradona',
         confirmButtonText: 'Entendido',
+        footer: '<a href="plantilla.html">Ir a Mi Equipo</a>'
       })
+}
+// AVISO DE CLUB CREADO (SWEET ALERT)
+function clubCreado(){
+    Swal.fire({
+        title: '¡Felicitaciones!',
+        text: 'Acabas de crear tu nuevo club.',
+        imageUrl: 'images/mascota-qatar.jpg',
+        imageWidth: 270,
+        imageHeight: 300,
+        imageAlt: 'Mascota Oficial del Mundial Qatar 2022',
+    })
 }
 // AVISO DE CLUB ELIMINADO (SWEET ALERT)
 function clubEliminado(){

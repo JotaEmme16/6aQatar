@@ -49,6 +49,7 @@ function ingresarClub(){
     let nombre_club = document.getElementById("nombreclub").value;
     document.getElementById("tuequipo").innerHTML = nombre_club.toUpperCase() + " | PLANTILLA OFICIAL";
     document.getElementById("nombreclub").value = "";
+    clubCreado();
 }
 
 // BOTÓN ELIMINAR CLUB
