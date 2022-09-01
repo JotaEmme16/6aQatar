@@ -10,7 +10,7 @@ function fichajesEquipo(){
             <img src="images/${jugador.imagen}" class="card-img-top" alt="${jugador.nombre}">
             <div class="card-body">
                 <h5 class="card-title">${jugador.nombre}</h5>
-                <p>Posición: ${jugador.posicion} <br> Nacionalidad: ${jugador.nacionalidad}</p>
+                <p>Posición: ${jugador.posicion}. <br> Nacionalidad: ${jugador.nacionalidad}.</p>
                 <a class="btn btn-danger" onclick="eliminarJugador(${jugador.id})">- Eliminar</a>
             </div>
             </div>
